@@ -22,6 +22,12 @@ public class UserController {
     @Autowired
     private HttpSession session;
 
+    @GetMapping("/logout")
+    public String logout() {
+        session.invalidate();
+        return "redirect:/";
+    }
+
     @GetMapping("/loginForm")
     public String loginForm(HttpServletRequest request) {
         // remember=ssar; JSESSIONID=E81C52DC7308EEDB346E8E027B30C64E
@@ -34,7 +40,7 @@ public class UserController {
         }
 
         request.setAttribute("remember", username);
-        System.out.println("디버그 : " + username);
+        // System.out.println("디버그 : " + username);
         return "user/loginForm";
     }
 
