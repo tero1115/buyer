@@ -15,7 +15,7 @@ import shop.mtcoding.buyer.model.ProductRepository;
 @Controller
 public class ProductController {
 
-    @Autowired
+    @Autowired // DI
     private ProductRepository productRepository;
 
     @GetMapping({ "/", "/product" })
