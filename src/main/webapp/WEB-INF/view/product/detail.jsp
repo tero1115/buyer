@@ -21,10 +21,9 @@
                 <td>${product.qty}</td>
                 <td>${product.createdAt}</td>
             </tr>
-
         </table>
-        <form action="/product/{id}/buy" method="post">
-            <input type="number" name="qty" min="0" max=${product.qty} required size="2">
+        <form action="/product/${product.id}/purchase" method="post">
+            <input type="number" name="qty" min="0" max=${product.qty} style="text-align: right" required>
             개 <input type="submit" value="구매하기">
         </form>
 
