@@ -8,7 +8,7 @@ public class ErrorController {
 
     @GetMapping("/notfound")
     public String error() {
-        System.out.println("테스트 : error 메서드 호출됨");
+        // System.out.println("테스트 : error 메서드 호출됨");
         return "error/error";
     }
 

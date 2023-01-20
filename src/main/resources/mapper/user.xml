@@ -10,7 +10,7 @@
    
    <select id="findAll" resultType="shop.mtcoding.buyer.model.User">
       select * from user_tb
-   </select>
+   </select> 
    
    <select id="findById" resultType="shop.mtcoding.buyer.model.User">
       select * from user_tb where id = #{id}
