@@ -22,14 +22,16 @@
                 <td>${product.createdAtToString}</td>
             </tr>
         </table>
-        <form action="/purchase/insert" method="post">
-            <input type="hidden" name="productId" value="${product.id}">
-            <select name="count">
-                <c:forEach var="num" begin="1" end="${product.qty}">
-                    <option value="${num}">${num}</option>
-                </c:forEach>
-            </select>
-            개 <button type="submit">구매하기</button>
-        </form>
+        <c:if test="${principal != null}">
+            <form action="/purchase/insert" method="post">
+                <input type="hidden" name="productId" value="${product.id}">
+                <select name="count">
+                    <c:forEach var="num" begin="1" end="${product.qty}">
+                        <option value="${num}">${num}</option>
+                    </c:forEach>
+                </select>
+                개 <button type="submit">구매하기</button>
+            </form>
+        </c:if>
 
         <%@ include file="../layout/footer.jsp" %>
