@@ -16,7 +16,5 @@ public interface ProductRepository {
     public int updateById(@Param("id") int id, @Param("name") String name, @Param("price") int price,
             @Param("qty") int qty);
 
-    public int buyProduct(@Param("id") int id, @Param("qty") int qty);
-
     public int deleteById(int id);
 }

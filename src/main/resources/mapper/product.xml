@@ -29,10 +29,5 @@
     </update>
 
 
-    <update id="buyProduct">
-        update product_tb
-        set qty = qty-#{qty}
-        where id = #{id}
-    </update>
 
 </mapper>
